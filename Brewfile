@@ -59,5 +59,4 @@ cask 'font-source-code-pro'
 
 # Mac App Store
 mas 'Magnet', id: 441258766
-mas 'Speedtest', id: 1153157709
 mas 'Usage', id: 1561788435
