@@ -24,10 +24,7 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
-
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
+brew bundle --file $HOME/.dotfiles/Brewfile
 
 # Install global NPM packages
 /opt/homebrew/bin/npm install --global pure-prompt
@@ -39,7 +36,7 @@ mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_passwor
 $HOME/.composer/vendor/bin/valet install
 
 # Create a Projects directory
-mkdir $HOME/Projects
+mkdir -p $HOME/Projects
 
 # Set macOS preferences - we will run this last because this will reload the shell
 # source $DOTFILES/.macos
