@@ -39,4 +39,4 @@ $HOME/.composer/vendor/bin/valet install
 mkdir -p $HOME/Projects
 
 # Set macOS preferences - we will run this last because this will reload the shell
-# source $DOTFILES/.macos
+# source $HOME/.dotfiles/.macos
