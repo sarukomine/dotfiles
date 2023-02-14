@@ -207,6 +207,10 @@ defaults write com.apple.dock show-process-indicators -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Change the layout of Launchpad
+defaults write com.apple.dock springboard-columns -int 8
+defaults write com.apple.dock springboard-rows -int 5
+
 # Add some app icons into the Dock
 APP=(
     "/System/Applications/Launchpad.app"
