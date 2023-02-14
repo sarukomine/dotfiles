@@ -1,0 +1,91 @@
+apps:
+  pages:
+  - number: 1
+    items:
+    - Safari
+    - Google Chrome
+    - Firefox
+    - Mail
+    - Calendar
+    - Reminders
+    - Notes
+    - FaceTime
+    - Messages
+    - Maps
+    - Weather
+    - Clock
+    - Calculator
+    - Visual Studio Code
+    - Signal
+    - 1Password
+    - Couleurs
+    - Figma
+    - Sequel Ace
+    - Obsidian
+    - Magnet
+    - DevUtils
+    - PHP Monitor
+    - WhatsApp
+    - Fork
+    - Discord
+    - The Unarchiver
+    - Binance
+    - Postman
+    - Usage
+    - JetBrains Toolbox
+    - Mos
+    - CheatSheet
+    - Raycast
+    - iTerm
+    - Music
+    - App Store
+    - System Settings
+    - folder: Other
+      pages:
+      - number: 1
+        items:
+        - Shortcuts
+        - QuickTime Player
+        - TextEdit
+        - Grapher
+        - Time Machine
+        - Font Book
+        - Mission Control
+        - Chess
+        - Stickies
+        - Image Capture
+        - VoiceOver Utility
+        - AirPort Utility
+        - Migration Assistant
+        - Terminal
+        - Activity Monitor
+        - Console
+        - Keychain Access
+        - System Information
+        - Automator
+        - Script Editor
+        - Disk Utility
+        - Digital Color Meter
+        - ColorSync Utility
+        - Screenshot
+        - Bluetooth File Exchange
+        - Audio MIDI Setup
+        - Contacts
+        - Photo Booth
+        - Preview
+        - Podcasts
+        - TV
+        - Find My
+        - Photos
+        - Voice Memos
+        - Stocks
+        - Books
+        - Dictionary
+        - Freeform
+        - Home
+        - Siri
+widgets:
+  pages: []
+dock_items:
+- ============
+desktop: {}
