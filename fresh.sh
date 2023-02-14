@@ -20,11 +20,11 @@ rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Update Homebrew recipes
-brew update
+/opt/homebrew/bin/brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle --file $HOME/.dotfiles/Brewfile
+/opt/homebrew/bin/brew tap homebrew/bundle
+/opt/homebrew/bin/brew bundle --file $HOME/.dotfiles/Brewfile
 
 # Install global NPM packages
 /opt/homebrew/bin/npm install --global pure-prompt
@@ -40,3 +40,6 @@ mkdir -p $HOME/Projects
 
 # Set macOS preferences - we will run this last because this will reload the shell
 # source $HOME/.dotfiles/.macos
+
+# Load a launchpad app layout from a YAML config file named `.launchpad.yaml`
+/opt/homebrew/bin/lporg load $HOME/.dotfiles/.launchpad.yaml
