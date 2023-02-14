@@ -1,5 +1,6 @@
 
 # Taps
+tap 'blacktop/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
@@ -14,6 +15,7 @@ brew 'git'
 brew 'pure'
 brew 'mas' # Mac App Store manager
 brew 'mackup'
+brew 'blacktop/tap/lporg'
 
 # Development
 brew 'php'
