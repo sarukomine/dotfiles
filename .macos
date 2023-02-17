@@ -180,16 +180,7 @@ defaults write com.apple.dock springboard-columns -int 8
 defaults write com.apple.dock springboard-rows -int 5
 
 # Add some app icons into the Dock
-APP=(
-    "/System/Applications/Launchpad.app"
-    "/Applications/iTerm.app"
-    "/Applications/Google Chrome.app"
-    "/Applications/Obsidian.app"
-    "/Applications/Visual Studio Code.app"
-    "/Applications/Sequel Ace.app"
-    "/System/Applications/Music.app"
-    "/System/Applications/System Settings.app"
-)
+APP=("/System/Applications/Launchpad.app" "/Applications/iTerm.app" "/Applications/Google Chrome.app" "/Applications/Obsidian.app" "/Applications/Visual Studio Code.app" "/Applications/Sequel Ace.app" "/System/Applications/Music.app" "/System/Applications/System Settings.app")
 
 for dockItem in $APP; do
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>'$dockItem'</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
