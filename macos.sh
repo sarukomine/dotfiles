@@ -41,19 +41,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool FALSE
 
-# Display ASCII control characters using caret notation in standard text views
-# Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
-defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
-
-# Set Help Viewer windows to non-floating mode
-defaults write com.apple.helpviewer DevMode -bool true
-
-# Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -129,26 +116,17 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
-
 # Finder: Keep folders on top
 defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -171,17 +149,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-# Enable AirDrop over Ethernet and on unsupported Macs running Lion
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
-defaults write com.apple.finder FXInfoPanesExpanded -dict \
-    General -bool true \
-    OpenWith -bool true \
-    Privileges -bool true
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -227,9 +195,6 @@ for dockItem in $APP; do
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>'$dockItem'</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 done
 
-# Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
-
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
@@ -249,9 +214,6 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-# Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -281,18 +243,8 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfile
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
-
-# Show the main window when launching Activity Monitor
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
 # Visualize CPU usage in the Activity Monitor Dock icon
 defaults write com.apple.ActivityMonitor IconType -int 5
@@ -325,13 +277,6 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # Turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
-
-###############################################################################
-# Photos                                                                      #
-###############################################################################
-
-# Prevent Photos from opening automatically when devices are plugged in
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
 # Google Chrome                                                               #
