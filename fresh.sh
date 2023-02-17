@@ -39,7 +39,7 @@ $HOME/.composer/vendor/bin/valet install
 mkdir -p $HOME/Projects
 
 # Set macOS preferences - we will run this last because this will reload the shell
-# source $HOME/.dotfiles/.macos
+source $HOME/.dotfiles/.macos
 
 # Load a launchpad app layout from a YAML config file named `.launchpad.yaml`
-/opt/homebrew/bin/lporg load $HOME/.dotfiles/.launchpad.yaml
+/opt/homebrew/bin/lporg load $HOME/.dotfiles/launchpad.yaml
