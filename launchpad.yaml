@@ -2,90 +2,89 @@ apps:
   pages:
   - number: 1
     items:
-    - Safari
     - Google Chrome
     - Firefox
-    - Mail
-    - Calendar
-    - Reminders
-    - Notes
-    - FaceTime
-    - Messages
-    - Maps
-    - Weather
-    - Clock
-    - Calculator
-    - Visual Studio Code
-    - Signal
     - 1Password
-    - Couleurs
+    - Discord
+    - Signal
+    - WhatsApp
+    - Binance
+    - Obsidian
+    - Visual Studio Code
     - Figma
     - Sequel Ace
-    - Obsidian
-    - Magnet
-    - DevUtils
-    - PHP Monitor
-    - WhatsApp
-    - Fork
-    - Discord
-    - The Unarchiver
-    - Binance
     - Postman
-    - Usage
+    - DevUtils
+    - Fork
     - JetBrains Toolbox
-    - Mos
+    - PHP Monitor
+    - The Unarchiver
     - CheatSheet
-    - Raycast
+    - Mos
+    - Magnet
+    - Couleurs
+    - Usage
     - iTerm
-    - Music
-    - App Store
-    - System Settings
-    - folder: Other
+    - Raycast
+    - 系統設定
+    - folder: Apple Apps
       pages:
       - number: 1
         items:
-        - Shortcuts
-        - QuickTime Player
-        - TextEdit
-        - Grapher
-        - Time Machine
-        - Font Book
-        - Mission Control
-        - Chess
-        - Stickies
-        - Image Capture
-        - VoiceOver Utility
-        - AirPort Utility
-        - Migration Assistant
-        - Terminal
-        - Activity Monitor
-        - Console
-        - Keychain Access
-        - System Information
-        - Automator
-        - Script Editor
-        - Disk Utility
-        - Digital Color Meter
-        - ColorSync Utility
-        - Screenshot
-        - Bluetooth File Exchange
-        - Audio MIDI Setup
-        - Contacts
+        - App Store
+        - Safari
+        - 郵件
+        - 通訊錄
+        - 日曆
+        - 提醒事項
+        - 備忘錄
+        - FaceTime
+        - 訊息
+        - 地圖
+        - 尋找
         - Photo Booth
-        - Preview
-        - Podcasts
+        - 相片
+        - 預覽程式
+        - 音樂
+        - Podcast
         - TV
-        - Find My
-        - Photos
-        - Voice Memos
-        - Stocks
-        - Books
-        - Dictionary
+        - 錄音機
+        - 天氣
+        - 股市
+        - 書籍
+        - 辭典
+        - 計算機
         - Freeform
-        - Home
+        - 家居
+        - 時鐘
         - Siri
-widgets:
-  pages: []
-dock_items:
-- ============
-desktop: {}
+    - folder: 其他
+      pages:
+      - number: 1
+        items:
+        - 捷徑
+        - QuickTime Player
+        - 文字編輯
+        - Grapher
+        - 時光機
+        - 字體簿
+        - 指揮中心
+        - 國際象棋
+        - 便條紙
+        - 影像截取
+        - 「旁白」工具程式
+        - AirPort工具程式
+        - 系統轉移輔助程式
+        - 終端機
+        - 活動監視器
+        - 系統監視程式
+        - 鑰匙圈存取
+        - 系統資料
+        - Automator
+        - 程式碼編寫程式
+        - 磁碟工具程式
+        - 數碼測色計
+        - 「色彩同步」工具程式
+        - 螢幕截圖
+        - 藍牙檔案交換程式
+        - 音訊MIDI設定
