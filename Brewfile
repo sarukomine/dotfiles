@@ -1,64 +1,68 @@
+# Tap
+tap "blacktop/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
 
-# Taps
-tap 'blacktop/tap'
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'nicoverbruggen/homebrew-cask'
-
-# Binaries
-brew 'bash' # Latest Bash version
-brew 'git'
-brew 'pure'
-brew 'mas' # Mac App Store manager
-brew 'mackup'
-brew 'blacktop/tap/lporg'
+# Formulaes
+brew "blacktop/tap/lporg"
+brew "mas"
 
 # Development
-brew 'php'
-brew 'php@8.1'
-brew 'composer'
-brew 'dnsmasq'
-brew 'mysql'
-brew 'nginx'
-brew 'node'
-brew 'redis'
-brew 'yarn'
+cask "dbngin"
+cask "devutils"
+cask "fork"
+cask "herd"
+cask "iterm2"
+cask "postman"
+cask "sequel-ace"
+cask "visual-studio-code"
 
 # Apps
-cask '1password'
-cask 'binance'
-cask 'cheatsheet'
-cask 'couleurs'
-cask 'devutils'
-cask 'discord'
-cask 'figma'
-cask 'firefox'
-cask 'fork'
-cask 'google-chrome'
-cask 'iterm2'
-cask 'jetbrains-toolbox'
-cask 'logi-options-plus'
-cask 'mos'
-cask 'obsidian'
-cask 'phpmon'
-cask 'postman'
-cask 'raycast'
-cask 'sequel-ace'
-cask 'signal'
-cask 'the-unarchiver'
-cask 'visual-studio-code'
-cask 'whatsapp'
+cask "appcleaner"
+cask "arc"
+cask "cheatsheet"
+cask "couleurs"
+cask "discord"
+cask "google-chrome"
+cask "imazing"
+cask "logi-options-plus"
+cask "mos"
+cask "obsidian"
+cask "raycast"
+cask "the-unarchiver"
+cask "whatsapp"
 
 # Fonts
-cask 'font-lato'
-cask 'font-fira-code'
-cask 'font-open-sans'
-cask 'font-source-code-pro'
+cask "font-fira-code"
+cask "font-jetbrains-mono"
 
 # Mac App Store
-mas 'Magnet', id: 441258766
-mas 'Usage', id: 1561788435
+mas "Magnet", id: 441258766
+mas "Usage", id: 1561788435
+
+# VS code
+vscode "akamud.vscode-theme-onedark"
+vscode "bmewburn.vscode-intelephense-client"
+vscode "bradlc.vscode-tailwindcss"
+vscode "esbenp.prettier-vscode"
+vscode "fabiospampinato.vscode-diff"
+vscode "file-icons.file-icons"
+vscode "formulahendry.auto-close-tag"
+vscode "formulahendry.auto-rename-tag"
+vscode "jock.svg"
+vscode "mechatroner.rainbow-csv"
+vscode "mikestead.dotenv"
+vscode "ms-vscode.atom-keybindings"
+vscode "naumovs.color-highlight"
+vscode "onecentlin.laravel-blade"
+vscode "onecentlin.laravel5-snippets"
+vscode "open-southeners.laravel-pint"
+vscode "redhat.vscode-yaml"
+vscode "richie5um2.vscode-sort-json"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "vue.volar"
+vscode "wayou.vscode-todo-highlight"
+vscode "xabikos.javascriptsnippets"
