@@ -22,7 +22,6 @@ apps:
         - Magnet
         - Couleurs
         - AppCleaner
-        - FortiClient
         - Usage
         - iTerm
         - Raycast
