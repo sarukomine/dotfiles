@@ -17,13 +17,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-MACKBOOK_NAME="Alvin MacBook"
-
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "$MACKBOOK_NAME"
-sudo scutil --set HostName "$MACKBOOK_NAME"
-sudo scutil --set LocalHostName "$MACKBOOK_NAME"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$MACKBOOK_NAME"
+# Set computer name (as done via System Preferences -> Sharing)
+sudo scutil --set ComputerName "Alvin MacBook"
+sudo scutil --set HostName "Alvin MacBook"
+sudo scutil --set LocalHostName "Alvin-MacBook"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Alvin MacBook"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -61,7 +59,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Asia/Hong_Kong" > /dev/null
+sudo systemsetup -settimezone "Asia/Hong_Kong" >> /dev/null 2>&1
 
 ###############################################################################
 # Energy saving                                                               #
@@ -70,26 +68,17 @@ sudo systemsetup -settimezone "Asia/Hong_Kong" > /dev/null
 # Enable lid wakeup
 sudo pmset -a lidwake 1
 
-# Restart automatically on power loss
-sudo pmset -a autorestart 1
-
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
-# Sleep the display after 60 minutes
-sudo pmset -a displaysleep 60
+# Sleep the display after 15 minutes
+sudo pmset -a displaysleep 15
 
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 60
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# Set machine sleep to 30 minutes on battery
+sudo pmset -b sleep 30
 
 # Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+sudo systemsetup -setcomputersleep Off >> /dev/null 2>&1
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
@@ -170,20 +159,30 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
+# Change the layout of Launchpad
+defaults write com.apple.dock springboard-columns -int 8
+defaults write com.apple.dock springboard-rows -int 5
+
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
-# Change the layout of Launchpad
-defaults write com.apple.dock springboard-columns -int 8
-defaults write com.apple.dock springboard-rows -int 5
-
 # Add some app icons into the Dock
-APP=("/System/Applications/Launchpad.app" "/Applications/iTerm.app" "/Applications/Google Chrome.app" "/Applications/Obsidian.app" "/Applications/Visual Studio Code.app" "/Applications/Sequel Ace.app" "/System/Applications/Music.app" "/System/Applications/System Settings.app")
+APP=("/System/Applications/Launchpad.app"
+     "/Applications/iTerm.app"
+     "/Applications/Arc.app"
+     "/Applications/Google Chrome.app"
+     "/Applications/Obsidian.app"
+     "/Applications/Visual Studio Code.app"
+     "/Applications/Sequel Ace.app"
+     "/Applications/Postman.app"
+     "/System/Applications/Music.app"
+     "/System/Applications/System Settings.app")
 
-for dockItem in $APP; do
-    defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>'$dockItem'</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+for ((i = 0; i < ${#APP[@]}; i++))
+do
+    defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${APP[i]}</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
 
 # Disable Dashboard
@@ -203,19 +202,19 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 ###############################################################################
 
 # Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+sudo defaults write com.apple.Safari UniversalSearchEnabled -bool false
+sudo defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
 # Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+sudo defaults write com.apple.Safari IncludeDevelopMenu -bool true
+sudo defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+sudo defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Warn about fraudulent websites
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+sudo defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 
 # Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+sudo defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
@@ -280,22 +279,23 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" \
-    "Address Book" \
-    "Calendar" \
-    "cfprefsd" \
-    "Contacts" \
-    "Dock" \
-    "Finder" \
-    "Google Chrome" \
-    "Mail" \
-    "Messages" \
-    "Photos" \
-    "Safari" \
-    "Spectacle" \
-    "SystemUIServer" \
-    "Terminal"; do
-    killall "${app}" &> /dev/null
-done
+APP=("Activity Monitor"
+     "Address Book"
+     "Calendar"
+     "cfprefsd"
+     "Contacts"
+     "Dock"
+     "Finder"
+     "Google Chrome"
+     "Mail"
+     "Messages"
+     "Photos"
+     "Safari"
+     "Spectacle"
+     "SystemUIServer"
+     "Terminal")
 
-echo "\nDone. Note that some of these changes require a logout/restart to take effect."
+for ((i = 0; i < ${#APP[@]}; i++))
+do
+    killall "${APP[i]}" >> /dev/null 2>&1
+done
