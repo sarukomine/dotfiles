@@ -1,90 +1,92 @@
 apps:
   pages:
-  - number: 1
-    items:
-    - Google Chrome
-    - Firefox
-    - 1Password
-    - Discord
-    - Signal
-    - WhatsApp
-    - Binance
-    - Obsidian
-    - Visual Studio Code
-    - Figma
-    - Sequel Ace
-    - Postman
-    - DevUtils
-    - Fork
-    - JetBrains Toolbox
-    - PHP Monitor
-    - The Unarchiver
-    - CheatSheet
-    - Mos
-    - Magnet
-    - Couleurs
-    - Usage
-    - iTerm
-    - Raycast
-    - 系統設定
-    - folder: Apple Apps
-      pages:
-      - number: 1
-        items:
-        - App Store
-        - Safari
-        - 郵件
-        - 通訊錄
-        - 日曆
-        - 提醒事項
-        - 備忘錄
-        - FaceTime
-        - 訊息
-        - 地圖
-        - 尋找
-        - Photo Booth
-        - 相片
-        - 預覽程式
-        - 音樂
-        - Podcast
-        - TV
-        - 錄音機
-        - 天氣
-        - 股市
-        - 書籍
-        - 辭典
-        - 計算機
-        - Freeform
-        - 家居
-        - 時鐘
-        - Siri
-    - folder: 其他
-      pages:
-      - number: 1
-        items:
-        - 捷徑
-        - QuickTime Player
-        - 文字編輯
-        - Grapher
-        - 時光機
-        - 字體簿
-        - 指揮中心
-        - 國際象棋
-        - 便條紙
-        - 影像截取
-        - 「旁白」工具程式
-        - AirPort工具程式
-        - 系統轉移輔助程式
-        - 終端機
-        - 活動監視器
-        - 系統監視程式
-        - 鑰匙圈存取
-        - 系統資料
-        - Automator
-        - 程式碼編寫程式
-        - 磁碟工具程式
-        - 數碼測色計
-        - 「色彩同步」工具程式
-        - 螢幕截圖
-        - 藍牙檔案交換程式
-        - 音訊MIDI設定
+    - number: 1
+      items:
+        - Arc
+        - Google Chrome
+        - Discord
+        - WhatsApp
+        - Obsidian
+        - Visual Studio Code
+        - Herd
+        - DBngin
+        - Sequel Ace
+        - Postman
+        - DevUtils
+        - Fork
+        - iMazing
+        - The Unarchiver
+        - Logi Options+
+        - CheatSheet
+        - Mos
+        - Magnet
+        - Couleurs
+        - AppCleaner
+        - FortiClient
+        - Usage
+        - iTerm
+        - Raycast
+        - 系統設定
+        - folder: Apple Apps
+          pages:
+            - number: 1
+              items:
+                - App Store
+                - Safari
+                - 郵件
+                - 通訊錄
+                - 日曆
+                - 提醒事項
+                - 備忘錄
+                - FaceTime
+                - 訊息
+                - 地圖
+                - 尋找
+                - Photo Booth
+                - 相片
+                - 預覽程式
+                - 音樂
+                - Podcast
+                - TV
+                - 錄音機
+                - 天氣
+                - 股市
+                - 書籍
+                - 辭典
+                - 計算機
+                - Freeform
+                - 家居
+                - 時鐘
+                - Siri
+        - folder: Other
+          pages:
+            - number: 1
+              items:
+                - 捷徑
+                - QuickTime Player
+                - 文字編輯
+                - Grapher
+                - 時光機
+                - 字體簿
+                - 指揮中心
+                - 國際象棋
+                - 便條紙
+                - 影像截取
+                - 「旁白」工具程式
+                - AirPort工具程式
+                - 系統轉移輔助程式
+                - 終端機
+                - 活動監視器
+                - 系統監視程式
+                - 鑰匙圈存取
+                - 系統資料
+                - Automator
+                - 程式碼編寫程式
+                - 磁碟工具程式
+                - 數碼測色計
+                - 「色彩同步」工具程式
+                - 螢幕截圖
+                - 藍牙檔案交換程式
+                - 音訊MIDI設定
+                - 螢幕共享
+                - 列印中心
