@@ -3,7 +3,7 @@
 echo "Setting up your Mac..."
 
 # Check for Oh My Zsh and install if we don't have it
-if test ! $(which omz); then
+if [ ! -d ~/.oh-my-zsh ]; then
     /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
@@ -15,7 +15,7 @@ if test ! $(which brew); then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+# Remove .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
@@ -30,4 +30,6 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 source $HOME/.dotfiles/.macos
 
 # Load a launchpad app layout from a YAML config file named `.launchpad.yaml`
-/opt/homebrew/bin/lporg load $HOME/.dotfiles/launchpad.yaml
+/opt/homebrew/bin/lporg load --config $HOME/.dotfiles/launchpad.yaml --no-backup --yes
+
+echo "\nDone. Note that some of these changes require a logout/restart to take effect."
