@@ -23,7 +23,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -48,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias zshconfig="code ~/.zshrc"
-alias update="brew update && brew upgrade && composer global update"
+alias update="brew update && brew upgrade"
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reload="exec $SHELL"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
@@ -57,8 +56,4 @@ alias cl="clear"
 # Directories
 alias dotfiles="cd $DOTFILES"
 
-# Laravel
-alias artisan="php artisan"
-alias tinker="artisan tinker"
-alias seed="artisan db:seed"
-alias migrate="artisan migrate"
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'

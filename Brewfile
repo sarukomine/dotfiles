@@ -9,10 +9,7 @@ brew "blacktop/tap/lporg"
 brew "mas"
 
 # Development
-cask "dbngin"
 cask "devutils"
-cask "fork"
-cask "herd"
 cask "iterm2"
 cask "postman"
 cask "sequel-ace"
@@ -40,6 +37,7 @@ cask "font-jetbrains-mono"
 # Mac App Store
 mas "Magnet", id: 441258766
 mas "Usage", id: 1561788435
+mas "iHosts", id: 1102004240
 
 # VS code
 vscode "akamud.vscode-theme-onedark"
