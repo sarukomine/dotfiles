@@ -7,8 +7,9 @@ apps:
         - Discord
         - WhatsApp
         - Obsidian
-        - Docker
         - Visual Studio Code
+        - PHP Monitor
+        - DBngin
         - Sequel Ace
         - Postman
         - DevUtils
