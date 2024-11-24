@@ -1,7 +1,6 @@
 # Tap
 tap "blacktop/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 
 # Formulaes
@@ -21,6 +20,7 @@ cask "arc"
 cask "cheatsheet"
 cask "couleurs"
 cask "discord"
+cask "docker"
 cask "google-chrome"
 cask "logi-options-plus"
 cask "mos"
