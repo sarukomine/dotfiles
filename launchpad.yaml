@@ -19,6 +19,7 @@ apps:
         - iHosts
         - Magnet
         - 密碼
+        - Couleurs
         - AppCleaner
         - iPhone鏡像輸出
         - Usage
@@ -60,6 +61,7 @@ apps:
           pages:
             - number: 1
               items:
+                - 貼士
                 - 捷徑
                 - QuickTime Player
                 - 文字編輯
@@ -76,7 +78,6 @@ apps:
                 - 終端機
                 - 活動監視器
                 - 系統監視程式
-                - 鑰匙圈存取
                 - 系統資料
                 - Automator
                 - 程式碼編寫程式
@@ -88,3 +89,4 @@ apps:
                 - 音訊MIDI設定
                 - 螢幕共享
                 - 列印中心
+                - LogiPluginService
