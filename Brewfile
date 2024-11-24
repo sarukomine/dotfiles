@@ -2,17 +2,23 @@
 tap "blacktop/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "nicoverbruggen/cask"
 
 # Formulaes
 brew "blacktop/tap/lporg" # Organize Your macOS Launchpad Apps
 brew "mas" # Mac App Store CLI
 
 # Development
-brew "php"
+brew "php", link: false
+brew "php@8.3", link: true
 brew "composer"
+brew "dnsmasq"
+brew "nginx"
 brew "node"
+cask "dbngin"
 cask "devutils"
 cask "iterm2"
+cask "phpmon"
 cask "postman"
 cask "sequel-ace"
 cask "visual-studio-code"
@@ -23,7 +29,6 @@ cask "arc"
 cask "cheatsheet"
 cask "couleurs"
 cask "discord"
-cask "docker"
 cask "google-chrome"
 cask "logi-options+"
 cask "mos"
