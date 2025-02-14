@@ -6,6 +6,8 @@ apps:
         - Google Chrome
         - Discord
         - WhatsApp
+        - WeChat
+        - 備忘錄
         - Obsidian
         - Visual Studio Code
         - PHP Monitor
@@ -37,7 +39,6 @@ apps:
                 - 通訊錄
                 - 日曆
                 - 提醒事項
-                - 備忘錄
                 - FaceTime
                 - 訊息
                 - 地圖
