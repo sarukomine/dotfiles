@@ -2,24 +2,15 @@
 tap "blacktop/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "nicoverbruggen/cask"
 
 # Formulaes
 brew "blacktop/tap/lporg" # Organize Your macOS Launchpad Apps
 brew "mas" # Mac App Store CLI
 
 # Development
-brew "php", link: false
-brew "php@8.3", link: true
-brew "composer"
-brew "dnsmasq"
-brew "nginx"
-brew "node"
 cask "dbngin"
 cask "devutils"
 cask "iterm2"
-cask "phpmon"
-cask "postman"
 cask "sequel-ace"
 cask "visual-studio-code"
 
@@ -35,6 +26,7 @@ cask "mos"
 cask "obsidian"
 cask "raycast"
 cask "the-unarchiver"
+cask "wechat"
 cask "whatsapp"
 
 # Fonts
@@ -57,14 +49,12 @@ vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "fyzhu.git-pretty-graph"
 vscode "jock.svg"
+vscode "laravel.vscode-laravel"
 vscode "mechatroner.rainbow-csv"
 vscode "mikestead.dotenv"
 vscode "ms-vscode.atom-keybindings"
 vscode "naumovs.color-highlight"
-vscode "onecentlin.laravel-blade"
-vscode "onecentlin.laravel5-snippets"
 vscode "open-southeners.laravel-pint"
-vscode "qwtel.sqlite-viewer"
 vscode "redhat.vscode-yaml"
 vscode "richie5um2.vscode-sort-json"
 vscode "shardulm94.trailing-spaces"
