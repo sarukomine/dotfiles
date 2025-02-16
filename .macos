@@ -176,7 +176,6 @@ APP=("/System/Applications/Launchpad.app"
      "/Applications/Obsidian.app"
      "/Applications/Visual Studio Code.app"
      "/Applications/Sequel Ace.app"
-     "/Applications/Postman.app"
      "/System/Applications/Music.app"
      "/System/Applications/System Settings.app")
 
