@@ -8,7 +8,6 @@ brew "blacktop/tap/lporg" # Organize Your macOS Launchpad Apps
 brew "mas" # Mac App Store CLI
 
 # Development
-cask "dbngin"
 cask "devutils"
 cask "iterm2"
 cask "sequel-ace"
@@ -17,14 +16,10 @@ cask "visual-studio-code"
 # Apps
 cask "appcleaner"
 cask "arc"
-cask "cheatsheet"
-cask "couleurs"
-cask "discord"
 cask "google-chrome"
 cask "herd"
 cask "logi-options+"
 cask "mos"
-cask "obsidian"
 cask "raycast"
 cask "the-unarchiver"
 cask "wechat"
@@ -36,8 +31,7 @@ cask "font-jetbrains-mono"
 
 # Mac App Store
 mas "Magnet", id: 441258766
-mas "Usage", id: 1561788435
-mas "iHosts", id: 1102004240
+mas "Usage", id: 15617884354
 
 # VS code
 vscode "akamud.vscode-theme-onedark"
