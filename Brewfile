@@ -1,7 +1,5 @@
 # Tap
 tap "blacktop/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 
 # Formulaes
 brew "blacktop/tap/lporg" # Organize Your macOS Launchpad Apps
@@ -31,7 +29,7 @@ cask "font-jetbrains-mono"
 
 # Mac App Store
 mas "Magnet", id: 441258766
-mas "Usage", id: 15617884354
+mas "Usage", id: 1561788435
 
 # VS code
 vscode "akamud.vscode-theme-onedark"
