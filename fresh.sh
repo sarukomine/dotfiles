@@ -23,13 +23,7 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 /opt/homebrew/bin/brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-/opt/homebrew/bin/brew tap homebrew/bundle
 /opt/homebrew/bin/brew bundle --file $HOME/.dotfiles/Brewfile
-
-# Install Laravel Valet
-/opt/homebrew/bin/composer global require laravel/valet
-$HOME/.composer/vendor/bin/valet install
-$HOME/.composer/vendor/bin/valet trust
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $HOME/.dotfiles/.macos
